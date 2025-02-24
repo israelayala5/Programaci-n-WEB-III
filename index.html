@@ -1,0 +1,94 @@
+ISRAEL AYALA 
+<br>
+https://github.com/israelayala5
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts en HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+        .layout {
+            border: 2px solid black;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .header, .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .content {
+            background: lightgray;
+            padding: 20px;
+            min-height: 100px;
+        }
+        .sidebar {
+            background: #ddd;
+            padding: 20px;
+            min-height: 100px;
+        }
+        .single-column .content {
+            width: 100%;
+        }
+        .two-column {
+            display: flex;
+        }
+        .two-column .sidebar {
+            width: 30%;
+        }
+        .two-column .content {
+            width: 70%;
+        }
+        .three-column {
+            display: flex;
+        }
+        .three-column .sidebar {
+            width: 20%;
+        }
+        .three-column .content {
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="layout single-column">
+            <div class="content">Layout de una sola columna(izquierda)</div>
+        </div>
+        <div class="layout two-column">
+            <div class="sidebar">Barra lateral</div>
+            <div class="content">Layout de dos columnas</div>
+        </div>
+        <div class="layout two-column">
+            <div class="content">Layout de dos columnas (derecha)</div>
+            <div class="sidebar">Barra lateral</div>
+        </div>
+        <div class="layout three-column">
+            <div class="sidebar">Barra lateral</div>
+            <div class="content">Layout de tres columnas</div>
+            <div class="sidebar">Barra lateral</div>
+        </div>
+        <div class="layout">
+            <div class="header">Encabezado</div>
+            <div class="content">Layout tipo encabezado-contenido-pie</div>
+            <div class="content">contenido</div>
+            <div class="footer">Pie de páginaS</div>
+        </div>
+    </div>
+</body>
+</html>
